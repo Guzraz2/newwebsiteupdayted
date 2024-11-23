@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us - PakTechServices</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+  <style>
+    /* General Styles */
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #f1f1f1; /* Light background */
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Navbar Styles */
+    .navbar {
+      background-color: #1e1e2f;
+      padding: 1rem 1.5rem;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+    .navbar-brand {
+      color: #ffffff;
+      font-size: 2.5rem;
+      font-weight: 600;
+    }
+    .navbar-brand:hover {
+      color: #ffc107;
+    }
+    .navbar-nav .nav-link {
+      color: #ffffff;
+      font-size: 1.1rem;
+      padding: 12px 20px;
+      transition: color 0.3s, background-color 0.3s ease;
+    }
+    .navbar-nav .nav-link:hover {
+      color: #ffc107;
+      background-color: rgba(255, 255, 255, 0.1);
+      border-radius: 5px;
+    }
+
+    /* About Section */
+    .about-section {
+      background: linear-gradient(120deg, #003366, #0056b3);
+      color: #ffffff;
+      padding: 100px 20px;
+      text-align: center;
+      animation: slideIn 2s ease-out;
+    }
+
+    @keyframes slideIn {
+      0% { transform: translateY(100%); opacity: 0; }
+      100% { transform: translateY(0); opacity: 1; }
+    }
+
+    .about-section h1 {
+      font-size: 3.5rem;
+      font-weight: 700;
+      margin-bottom: 20px;
+      transition: color 0.3s ease-in-out;
+    }
+    .about-section h1:hover {
+      color: #ffc107;
+    }
+
+    .about-section p {
+      font-size: 1.3rem;
+      margin-top: 20px;
+      font-weight: 300;
+      transition: color 0.3s ease-in-out;
+    }
+    .about-section p:hover {
+      color: #ffc107;
+    }
+
+    /* Content Section */
+    .content-section {
+      padding: 60px 20px;
+      background-color: #ffffff;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      margin-top: -50px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .content-section h2 {
+      font-size: 2.5rem;
+      color: #003366;
+      text-align: center;
+      margin-bottom: 30px;
+      transition: color 0.3s ease-in-out;
+    }
+    .content-section h2:hover {
+      color: #ffc107;
+    }
+
+    .content-section p {
+      font-size: 1.2rem;
+      line-height: 1.8;
+      color: #555;
+      margin-bottom: 20px;
+    }
+
+    .why-choose-us p {
+      font-size: 1.3rem;
+      color: #555;
+      line-height: 1.8;
+      margin-bottom: 20px;
+    }
+
+    /* Footer */
+    .footer {
+      background-color: #111;
+      color: #f8f9fa;
+      text-align: center;
+      padding: 30px 20px;
+      font-size: 1rem;
+    }
+    .footer a {
+      color: #ffc107;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s ease-in-out;
+    }
+    .footer a:hover {
+      color: #e0a800;
+      text-decoration: underline;
+    }
+
+    /* Responsive Layout */
+    @media (max-width: 768px) {
+      .about-section h1 {
+        font-size: 2.8rem;
+      }
+      .about-section p {
+        font-size: 1.1rem;
+      }
+
+      .content-section h2 {
+        font-size: 2rem;
+      }
+
+      .content-section p {
+        font-size: 1rem;
+      }
+
+      .why-choose-us p {
+        font-size: 1.1rem;
+      }
+    }
+
+    @media (max-width: 576px) {
+      .about-section h1 {
+        font-size: 2.4rem;
+      }
+      .about-section p {
+        font-size: 1rem;
+      }
+
+      .content-section h2 {
+        font-size: 1.8rem;
+      }
+
+      .content-section p {
+        font-size: 1rem;
+      }
+
+      .why-choose-us p {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container">
+      <a class="navbar-brand" href="#">Pak Web Solution</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="products.html">Products</a></li>
+          <li class="nav-item"><a class="nav-link" href="#support">Support</a></li>
+          <li class="nav-item"><a class="nav-link" href="#reviews">Reviews</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- About Section -->
+  <div class="about-section">
+    <h1>About PakTechServices</h1>
+    <p>We offer cutting-edge hosting solutions for all your needs, providing excellent support, high-performance services, and reliability.</p>
+  </div>
+
+  <!-- Content Section -->
+  <div class="content-section">
+    <div class="container">
+      <h2>Who We Are</h2>
+      <p>PakTechServices is a leading provider of premium hosting solutions. Our mission is to empower businesses and gamers with fast, secure, and reliable services to ensure a seamless online experience. We offer a wide range of services, including Website Hosting, Game Hosting (Minecraft), RDP Servers, and Domain Registration. Our expert support team is always available to assist with any technical issues, making sure your services run smoothly.</p>
+
+      <h2>Our Mission</h2>
+      <p>At PakTechServices, our goal is to provide our clients with the best hosting solutions that not only meet but exceed expectations. We are committed to continuously improving our services to ensure that your website or game server is always performing at its best. Whether you're running a business or hosting a gaming community, we have the tools and expertise to keep you online and secure.</p>
+
+      <!-- Why Choose Us Section -->
+      <div class="why-choose-us">
+        <h2>Why Choose Us?</h2>
+        <p>At PakTechServices, we pride ourselves on offering fast, secure, and highly reliable hosting solutions that cater to both businesses and gaming enthusiasts. Our hosting platforms are designed for optimal performance, ensuring your website or server runs seamlessly. We focus on security, scalability, and flexibility, offering services that can grow with your needs. With 24/7 support, we ensure that our clients can access timely assistance whenever they need it, making PakTechServices the right choice for anyone looking for professional hosting services.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
+    <p>© 2024 <a href="#">PakWebSolution</a>. All rights reserved.</p>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
