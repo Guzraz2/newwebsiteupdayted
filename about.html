@@ -1,227 +1,392 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About Us - PakTechServices</title>
+  <title>About Us - Webify Pakistan</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css">
   <style>
     /* General Styles */
     body {
-      font-family: 'Roboto', sans-serif;
-      background-color: #f1f1f1; /* Light background */
-      color: #333;
+      font-family: 'Poppins', sans-serif;
+      background-color: #f4f6f9;
+      color: #343a40;
       margin: 0;
       padding: 0;
     }
 
     /* Navbar Styles */
     .navbar {
-      background-color: #1e1e2f;
+      background: #0a0a23;
       padding: 1rem 1.5rem;
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     }
+
     .navbar-brand {
-      color: #ffffff;
       font-size: 2.5rem;
-      font-weight: 600;
+      font-weight: 700;
+      color: #ffffff;
+      display: flex;
+      align-items: center;
     }
-    .navbar-brand:hover {
+
+    .navbar-brand i {
+      margin-right: 10px;
+      font-size: 2.8rem;
       color: #ffc107;
     }
+
     .navbar-nav .nav-link {
       color: #ffffff;
       font-size: 1.1rem;
-      padding: 12px 20px;
-      transition: color 0.3s, background-color 0.3s ease;
+      margin: 0 10px;
+      position: relative;
     }
-    .navbar-nav .nav-link:hover {
-      color: #ffc107;
-      background-color: rgba(255, 255, 255, 0.1);
-      border-radius: 5px;
+
+    .navbar-nav .nav-link:hover::after {
+      content: '';
+      width: 100%;
+      height: 2px;
+      background: #ffc107;
+      position: absolute;
+      bottom: -5px;
+      left: 0;
     }
 
     /* About Section */
     .about-section {
-      background: linear-gradient(120deg, #003366, #0056b3);
+      background: linear-gradient(140deg, #0a0a23, #1d2671, #0083b0);
       color: #ffffff;
-      padding: 100px 20px;
+      padding: 120px 20px;
       text-align: center;
-      animation: slideIn 2s ease-out;
-    }
-
-    @keyframes slideIn {
-      0% { transform: translateY(100%); opacity: 0; }
-      100% { transform: translateY(0); opacity: 1; }
+      border-bottom: 5px solid #ffc107;
     }
 
     .about-section h1 {
       font-size: 3.5rem;
       font-weight: 700;
-      margin-bottom: 20px;
-      transition: color 0.3s ease-in-out;
-    }
-    .about-section h1:hover {
-      color: #ffc107;
     }
 
     .about-section p {
-      font-size: 1.3rem;
+      font-size: 1.4rem;
       margin-top: 20px;
       font-weight: 300;
-      transition: color 0.3s ease-in-out;
-    }
-    .about-section p:hover {
-      color: #ffc107;
     }
 
-    /* Content Section */
-    .content-section {
-      padding: 60px 20px;
-      background-color: #ffffff;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-      margin-top: -50px;
-      position: relative;
-      z-index: 1;
-    }
-
-    .content-section h2 {
-      font-size: 2.5rem;
-      color: #003366;
-      text-align: center;
-      margin-bottom: 30px;
-      transition: color 0.3s ease-in-out;
-    }
-    .content-section h2:hover {
-      color: #ffc107;
-    }
-
-    .content-section p {
+    .about-section .btn {
+      background-color: #ffc107;
+      color: #0a0a23;
+      padding: 15px 40px;
       font-size: 1.2rem;
-      line-height: 1.8;
-      color: #555;
-      margin-bottom: 20px;
+      border-radius: 30px;
+      transition: all 0.3s ease;
     }
 
-    .why-choose-us p {
+    .about-section .btn:hover {
+      background-color: #e0a800;
+      transform: scale(1.1);
+    }
+
+    /* Why Choose Us Section */
+    .choose-us-section {
+      padding: 80px 20px;
+      background: #ffffff;
+      text-align: center;
+    }
+
+    .choose-us-section h2 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: #0a0a23;
+      margin-bottom: 40px;
+    }
+
+    .choose-us-section .feature {
+      display: flex;
+      align-items: center;
+      margin-bottom: 30px;
+    }
+
+    .choose-us-section .feature i {
+      font-size: 2.5rem;
+      color: #ffc107;
+      margin-right: 20px;
+    }
+
+    .choose-us-section .feature p {
       font-size: 1.3rem;
       color: #555;
-      line-height: 1.8;
-      margin-bottom: 20px;
+      margin-bottom: 0;
+    }
+
+    .choose-us-section .feature:last-child {
+      margin-bottom: 0;
+    }
+
+    /* Reviews Section */
+    .reviews-section {
+      padding: 80px 20px;
+      background: #f4f6f9;
+    }
+
+    .reviews-section h2 {
+      text-align: center;
+      font-size: 3rem;
+      color: #0a0a23;
+      font-weight: 700;
+      margin-bottom: 50px;
+    }
+
+    .review-card {
+      background: #ffffff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      transition: transform 0.3s, box-shadow 0.3s ease;
+    }
+
+    .review-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+    }
+
+    .review-card p {
+      font-size: 1.2rem;
+      font-weight: 300;
+      color: #555;
+    }
+
+    .review-card .reviewer-name {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-top: 15px;
+      color: #0a0a23;
+    }
+
+    .review-card .reviewer-location {
+      font-size: 1.1rem;
+      font-weight: 300;
+      color: #777;
+    }
+
+    .review-card .stars {
+      color: #ffc107;
+      font-size: 1.5rem;
     }
 
     /* Footer */
     .footer {
-      background-color: #111;
+      background-color: #0a0a23;
       color: #f8f9fa;
+      padding: 40px 0;
       text-align: center;
-      padding: 30px 20px;
-      font-size: 1rem;
     }
+
     .footer a {
       color: #ffc107;
       text-decoration: none;
-      font-weight: 600;
-      transition: color 0.3s ease-in-out;
+      margin: 0 10px;
     }
+
     .footer a:hover {
       color: #e0a800;
-      text-decoration: underline;
     }
 
-    /* Responsive Layout */
-    @media (max-width: 768px) {
+    /* Responsive Styles */
+    @media (max-width: 1200px) {
       .about-section h1 {
-        font-size: 2.8rem;
-      }
-      .about-section p {
-        font-size: 1.1rem;
+        font-size: 3rem;
       }
 
-      .content-section h2 {
+      .about-section p {
+        font-size: 1.3rem;
+      }
+
+      .choose-us-section h2 {
         font-size: 2rem;
       }
 
-      .content-section p {
-        font-size: 1rem;
+      .review-card {
+        padding: 20px;
+      }
+    }
+
+    @media (max-width: 992px) {
+      .review-card {
+        padding: 20px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .about-section h1 {
+        font-size: 2.5rem;
       }
 
-      .why-choose-us p {
-        font-size: 1.1rem;
+      .about-section p {
+        font-size: 1.2rem;
+      }
+
+      .reviews-section h2 {
+        font-size: 2rem;
+      }
+
+      .choose-us-section h2 {
+        font-size: 1.8rem;
+      }
+
+      .review-card {
+        padding: 15px;
+      }
+
+      .navbar-brand,
+      .navbar-toggler {
+        font-size: 1.5rem;
+      }
+
+      .navbar-nav .nav-link {
+        font-size: 1rem;
       }
     }
 
     @media (max-width: 576px) {
       .about-section h1 {
-        font-size: 2.4rem;
+        font-size: 2rem;
       }
+
       .about-section p {
+        font-size: 1.1rem;
+      }
+
+      .review-card .reviewer-name {
+        font-size: 1.3rem;
+      }
+
+      .review-card .reviewer-location {
         font-size: 1rem;
       }
 
-      .content-section h2 {
-        font-size: 1.8rem;
-      }
-
-      .content-section p {
-        font-size: 1rem;
-      }
-
-      .why-choose-us p {
-        font-size: 1rem;
+      .footer {
+        font-size: 0.9rem;
       }
     }
   </style>
 </head>
+
 <body>
 
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-dark">
     <div class="container">
-      <a class="navbar-brand" href="#">Pak Web Solution</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <a class="navbar-brand" href="#">
+        <i class="bi bi-globe"></i> Webify Pakistan
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-          <li class="nav-item"><a class="nav-link" href="products.html">Products</a></li>
-          <li class="nav-item"><a class="nav-link" href="#support">Support</a></li>
-          <li class="nav-item"><a class="nav-link" href="#reviews">Reviews</a></li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="products.html">Products</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
         </ul>
       </div>
     </div>
   </nav>
 
   <!-- About Section -->
-  <div class="about-section">
-    <h1>About PakTechServices</h1>
-    <p>We offer cutting-edge hosting solutions for all your needs, providing excellent support, high-performance services, and reliability.</p>
-  </div>
+  <section class="about-section">
+    <h1>About Us</h1>
+    <p>At Webify Pakistan, we are committed to providing reliable, fast, and affordable hosting solutions for all your web, game, and business needs. Our goal is to help you establish a strong online presence. With state-of-the-art technology, personalized support, and a focus on customer satisfaction, we ensure your success in the digital world.</p>
+    <a href="contact.html" class="btn">Contact Us</a>
+  </section>
 
-  <!-- Content Section -->
-  <div class="content-section">
+  <!-- Why Choose Us Section -->
+  <section class="choose-us-section">
+    <h2>Why Choose Us?</h2>
     <div class="container">
-      <h2>Who We Are</h2>
-      <p>PakTechServices is a leading provider of premium hosting solutions. Our mission is to empower businesses and gamers with fast, secure, and reliable services to ensure a seamless online experience. We offer a wide range of services, including Website Hosting, Game Hosting (Minecraft), RDP Servers, and Domain Registration. Our expert support team is always available to assist with any technical issues, making sure your services run smoothly.</p>
-
-      <h2>Our Mission</h2>
-      <p>At PakTechServices, our goal is to provide our clients with the best hosting solutions that not only meet but exceed expectations. We are committed to continuously improving our services to ensure that your website or game server is always performing at its best. Whether you're running a business or hosting a gaming community, we have the tools and expertise to keep you online and secure.</p>
-
-      <!-- Why Choose Us Section -->
-      <div class="why-choose-us">
-        <h2>Why Choose Us?</h2>
-        <p>At PakTechServices, we pride ourselves on offering fast, secure, and highly reliable hosting solutions that cater to both businesses and gaming enthusiasts. Our hosting platforms are designed for optimal performance, ensuring your website or server runs seamlessly. We focus on security, scalability, and flexibility, offering services that can grow with your needs. With 24/7 support, we ensure that our clients can access timely assistance whenever they need it, making PakTechServices the right choice for anyone looking for professional hosting services.</p>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="feature">
+            <i class="bi bi-speedometer"></i>
+            <p>Lightning-fast performance with 99.9% uptime guarantee.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="feature">
+            <i class="bi bi-headset"></i>
+            <p>24/7 customer support to assist you with any issues.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="feature">
+            <i class="bi bi-shield-lock"></i>
+            <p>Top-notch security to protect your website and data.</p>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
+  </section>
+
+  <!-- Customer Reviews Section -->
+  <section class="reviews-section">
+    <h2>Customer Reviews</h2>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="review-card">
+            <div class="stars">
+              &#9733;&#9733;&#9733;&#9733;&#9733;
+            </div>
+            <p>"Webify Pakistan offers top-tier services, and their support team is incredibly helpful. Highly recommend!"</p>
+            <div class="reviewer-name">Ali Khan</div>
+            <div class="reviewer-location">Lahore, Pakistan</div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="review-card">
+            <div class="stars">
+              &#9733;&#9733;&#9733;&#9733;&#9733;
+            </div>
+            <p>"We switched to Webify Pakistan for our game hosting needs. The speed and performance are unmatched!"</p>
+            <div class="reviewer-name">Alice Smith</div>
+            <div class="reviewer-location">Karachi, Pakistan</div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="review-card">
+            <div class="stars">
+              &#9733;&#9733;&#9733;&#9733;&#9733;
+            </div>
+            <p>"Webify Pakistan has provided us with excellent support and service for over a year now. Highly recommended!"</p>
+            <div class="reviewer-name">Muhammad Ali</div>
+            <div class="reviewer-location">Islamabad, Pakistan</div>
+          </div>
+        </div>
+        <!-- Repeat review cards for a total of 8 reviews -->
+      </div>
+    </div>
+  </section>
 
   <!-- Footer -->
-  <div class="footer">
-    <p>© 2024 <a href="#">PakWebSolution</a>. All rights reserved.</p>
-  </div>
+  <footer class="footer">
+    <p>&copy; 2024 Webify Pakistan. All Rights Reserved.</p>
+    <a href="ppolicy.html">Privacy Policy</a> | <a href="terms.html">Terms & Conditions</a>
+  </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
