@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - Webify Pakistan</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* General Styles */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', Arial, sans-serif;
+            background: #2C3E50;
+            color: #ECF0F1;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        /* Navbar Styles */
+        .navbar {
+            background-color: #1A3D6C;
+            padding: 1rem;
+        }
+
+        .navbar-brand {
+            font-size: 2rem;
+            color: white;
+            font-weight: bold;
+            white-space: nowrap;
+        }
+
+        .navbar-nav {
+            margin-left: auto;
+        }
+
+        .navbar-nav .nav-item {
+            margin-left: 2rem;
+        }
+
+        .navbar-nav a {
+            font-size: 1.1rem;
+            color: white;
+            transition: color 0.3s;
+        }
+
+        .navbar-nav a:hover {
+            color: #3498DB;
+        }
+
+        .navbar-collapse {
+            justify-content: flex-end;
+        }
+
+        .navbar-toggler {
+            border: none;
+        }
+
+        .navbar-toggler-icon {
+            background-color: white;
+        }
+
+        /* Privacy Policy Section */
+        .privacy-policy {
+            padding: 5rem 2rem;
+            background: #34495E;
+            color: #ECF0F1;
+            text-align: center;
+        }
+
+        /* Slow loading effect on heading */
+        .slow-loading-text {
+            animation: fadeInUp 2s ease-out forwards;
+            opacity: 0;
+        }
+
+        @keyframes fadeInUp {
+            0% {
+                transform: translateY(20px);
+                opacity: 0;
+            }
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .privacy-policy h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            color: #3498DB;
+            opacity: 0; /* Initial state */
+            animation: fadeInUp 1.5s ease-out forwards; /* Apply slow fade-in effect */
+        }
+
+        .privacy-policy p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .privacy-policy ul {
+            text-align: left;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            font-size: 1.1rem;
+        }
+
+        .privacy-policy li {
+            margin-bottom: 1rem;
+        }
+
+        .cta-note {
+            margin-top: 3rem;
+            font-size: 1rem;
+            color: #BDC3C7;
+        }
+
+        .cta-note .warning {
+            color: #E74C3C;
+            font-weight: bold;
+        }
+
+        /* Button Styling for Learn More */
+        .learn-more-btn {
+            background-color: #3498DB;
+            color: white;
+            padding: 0.8rem 2rem;
+            font-size: 1rem;
+            text-transform: uppercase;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin-top: 2rem;
+        }
+
+        .learn-more-btn:hover {
+            background-color: #2980B9;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 992px) {
+            .privacy-policy p {
+                font-size: 1rem;
+            }
+
+            .privacy-policy h2 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg">
+        <a class="navbar-brand" href="#">Webify Pakistan</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="products.html">Products</a></li>
+                <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Privacy Policy -->
+    <div class="privacy-policy">
+        <h2 class="slow-loading-text">Privacy Policy</h2>
+        <p>At Webify Pakistan, we take your privacy seriously. Please read the following policy carefully to understand how we collect, use, and protect your personal information.</p>
+
+        <h3>Important Disclaimer</h3>
+        <p>As an underage operator, we do not have full knowledge of all laws and regulations. We highly encourage users to consult legal experts if needed.</p>
+        
+        <h3>Third-Party Services</h3>
+        <p>We use third-party services for payment processing, email delivery, and other operations. These services may collect your personal data in accordance with their privacy policies. We do not control or take responsibility for their practices.</p>
+
+        <h3>Manual DNS Handling & Code Requirement</h3>
+        <p>For domain registrations, all DNS records will be manually handled by us. For web hosting, you will need to provide the necessary code to host your website. We do not provide a control panel for managing domains or hosting services. All actions are performed manually by our team.</p>
+
+        <p>Our working hours are as follows:</p>
+        <ul>
+            <li>Monday to Friday: 3 PM - 10 PM</li>
+            <li>Saturday: 10 AM - 10 PM</li>
+            <li>Sunday: On and off, depending on availability</li>
+        </ul>
+
+        <!-- Contact Details with Actions -->
+        <h3>Contact Us</h3>
+        <ul>
+            <li><strong>Phone:</strong> <span id="phoneNumber" onclick="copyToClipboard('phoneNumber')">+92 300 0000000</span></li>
+            <li><strong>Email:</strong> <span id="emailAddress" onclick="copyToClipboard('emailAddress')">support@webifypk.com</span></li>
+            <li><strong>Instagram:</strong> <a href="https://www.instagram.com/webifypk/" target="_blank">Follow Us on Instagram</a></li>
+            <li><strong>Facebook:</strong> <a href="https://www.facebook.com/webifypk" target="_blank">Follow Us on Facebook</a></li>
+        </ul>
+
+        <div class="cta-note">
+            <p class="warning">Please note that we reserve the right to modify this privacy policy at any time. Ensure you review this page regularly for updates.</p>
+        </div>
+
+        <!-- Learn More Button -->
+        <button class="learn-more-btn" onclick="document.getElementById('learnMoreSection').scrollIntoView({ behavior: 'smooth' });">
+            Learn More
+        </button>
+
+        <div id="learnMoreSection" style="margin-top: 4rem;">
+            <h3>Learn More About Our Policies</h3>
+            <p>We understand that many users may have concerns regarding our policies, especially considering our underage status and lack of full legal knowledge. Here's more about how we handle these matters:</p>
+            <ul>
+                <li><strong>Manual DNS Handling:</strong> All DNS records for domain registrations are handled manually by us to ensure accuracy and security.</li>
+                <li><strong>Web Hosting Code Requirement:</strong> To host a website, you must provide the necessary code. We do not offer pre-configured panels or automation tools for this process.</li>
+                <li><strong>Working Hours:</strong> Our operational hours are from 3 PM to 10 PM on weekdays, and 10 AM to 10 PM on Saturdays. Sundays are unpredictable, as we may be unavailable.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Footer (optional) -->
+    <footer class="text-center text-white bg-dark py-4">
+        <p>© 2024 Webify Pakistan - All Rights Reserved</p>
+    </footer>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+    <script>
+        // Function to copy text to clipboard
+        function copyToClipboard(elementId) {
+            var text = document.getElementById(elementId).innerText;
+            navigator.clipboard.writeText(text).then(function () {
+                alert("Copied to clipboard: " + text);
+            }).catch(function (err) {
+                alert("Unable to copy text: " + err);
+            });
+        }
+    </script>
+</body>
+
+</html>
