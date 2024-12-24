@@ -2,445 +2,444 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Products - WebifyPakistan</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css">
-  <style>
-    /* General Styles */
-    body {
-      font-family: 'Poppins', sans-serif;
-      background-color: #f4f6f9;
-      color: #343a40;
-      margin: 0;
-      padding: 0;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webify Pakistan - Products</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* General Styles */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', Arial, sans-serif;
+            background: #2C3E50;
+            color: #ECF0F1;
+            overflow-x: hidden;
+        }
 
-    /* Navbar Styles */
-    .navbar {
-      background: #0a0a23;
-      padding: 1rem 1.5rem;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    }
+        a {
+            text-decoration: none;
+        }
 
-    .navbar-brand {
-      font-size: 2.5rem;
-      font-weight: 700;
-      color: #ffffff;
-      display: flex;
-      align-items: center;
-    }
+        /* Navbar Styles */
+        .navbar {
+            background-color: #1A3D6C;
+            margin-bottom: 0; /* Remove bottom margin */
+        }
 
-    .navbar-brand i {
-      margin-right: 10px;
-      font-size: 2.8rem;
-      color: #ffc107;
-    }
+        .navbar-brand {
+            font-size: 2rem;
+            color: white;
+            font-weight: bold;
+        }
 
-    .navbar-nav .nav-link {
-      color: #ffffff;
-      font-size: 1.1rem;
-      margin: 0 10px;
-      position: relative;
-    }
+        .navbar-nav a {
+            font-size: 1.1rem;
+            color: white;
+            margin-left: 2rem;
+            transition: color 0.3s;
+        }
 
-    .navbar-nav .nav-link:hover::after {
-      content: '';
-      width: 100%;
-      height: 2px;
-      background: #ffc107;
-      position: absolute;
-      bottom: -5px;
-      left: 0;
-    }
+        .navbar-nav a:hover {
+            color: #3498DB;
+        }
 
-    /* Hero Section */
-    .hero-section {
-      background: linear-gradient(140deg, #0a0a23, #1d2671, #0083b0);
-      color: #ffffff;
-      padding: 120px 20px;
-      text-align: center;
-      border-bottom: 5px solid #ffc107;
-    }
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #0A3D6B, #1F6F96);
+            color: white;
+            text-align: center;
+            padding: 6rem 2rem;
+            position: relative;
+            margin-top: -1px; /* Remove any margin to eliminate the gap */
+        }
 
-    .hero-section h1 {
-      font-size: 3.5rem;
-      font-weight: 700;
-    }
+        /* Fade In Text Animation */
+        @keyframes fadeInText {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
 
-    .hero-section p {
-      font-size: 1.4rem;
-      margin-top: 20px;
-      font-weight: 300;
-    }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
 
-    .hero-section .btn {
-      background-color: #ffc107;
-      color: #0a0a23;
-      padding: 15px 40px;
-      font-size: 1.2rem;
-      border-radius: 30px;
-      transition: all 0.3s ease;
-    }
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+            letter-spacing: 1px;
+            animation: fadeInText 2s ease-out; /* Applying animation */
+        }
 
-    .hero-section .btn:hover {
-      background-color: #e0a800;
-      transform: scale(1.1);
-    }
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            animation: fadeInText 2s ease-out 0.5s; /* Delay added for p tag */
+        }
 
-    /* Product Cards Section */
-    .product-section {
-      padding: 80px 20px;
-    }
+        .hero .button-group {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+        }
 
-    .product-section h2 {
-      text-align: center;
-      font-size: 3rem;
-      color: #0a0a23;
-      font-weight: 700;
-      margin-bottom: 50px;
-    }
+        .hero .button-group a {
+            padding: 0.75rem 2rem;
+            border-radius: 5px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            color: white;
+            background: #3498DB;
+            transition: background 0.3s, transform 0.3s;
+        }
 
-    .product-card {
-      background: #ffffff;
-      padding: 30px;
-      border-radius: 12px;
-      text-align: center;
-      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
-      transition: transform 0.3s, box-shadow 0.3s ease;
-    }
+        .hero .button-group a:hover {
+            background: #2980B9;
+            transform: scale(1.05);
+        }
 
-    .product-card:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
-    }
+        /* Products Section */
+        .products {
+            padding: 5rem 2rem;
+            background: #34495E;
+            animation: fadeInUp 1s ease-out;
+        }
 
-    .product-card img {
-      width: 100%;
-      height: auto;
-      border-radius: 10px;
-      margin-bottom: 15px;
-    }
+        .products h2 {
+            font-size: 2.5rem;
+            color: #3498DB;
+            margin-bottom: 3rem;
+            text-align: center;
+        }
 
-    .product-card h5 {
-      font-size: 1.7rem;
-      font-weight: 600;
-      margin-bottom: 15px;
-    }
+        .product-category h3 {
+            font-size: 2rem;
+            color: #3498DB;
+            font-weight: bold;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
 
-    .product-card p {
-      font-size: 1.1rem;
-      color: #666;
-    }
+        .product-card {
+            background: #34495E;
+            padding: 2rem;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s, box-shadow 0.3s, background 0.3s ease;
+            margin-bottom: 2rem;
+        }
 
-    .product-card .price {
-      font-size: 1.3rem;
-      font-weight: 700;
-      color: #e0a800;
-      margin: 10px 0;
-    }
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+            background: #1F6F96;
+        }
 
-    .product-card .btn-buy {
-      background-color: #ffc107;
-      color: #0a0a23;
-      border-radius: 30px;
-      padding: 10px 30px;
-      margin-top: 20px;
-      text-decoration: none;
-      font-size: 1.1rem;
-    }
+        .product-card img {
+            width: 100%;
+            height: auto;
+            margin-bottom: 1rem;
+        }
 
-    .product-card .btn-buy:hover {
-      background-color: #e0a800;
-      transform: scale(1.1);
-    }
+        .product-card h3 {
+            font-size: 1.6rem;
+            margin-bottom: 0.5rem;
+            color: #3498DB;
+        }
 
-    /* Footer */
-    .footer {
-      background-color: #0a0a23;
-      color: #f8f9fa;
-      padding: 40px 0;
-      text-align: center;
-    }
+        .product-card p {
+            color: #BDC3C7;
+            line-height: 1.5;
+            margin-bottom: 1rem;
+        }
 
-    .footer a {
-      color: #ffc107;
-      text-decoration: none;
-      margin: 0 10px;
-    }
+        .product-card .price {
+            font-size: 1.5rem;
+            color: #3498DB;
+            margin-bottom: 1rem;
+        }
 
-    .footer a:hover {
-      color: #e0a800;
-    }
+        .product-card a {
+            display: inline-block;
+            padding: 0.75rem 2rem;
+            font-size: 1.1rem;
+            font-weight: bold;
+            background-color: #3498DB;
+            color: white;
+            border-radius: 5px;
+            text-transform: uppercase;
+            margin-top: 1rem;
+            transition: background-color 0.3s ease, transform 0.3s;
+        }
 
-    /* Responsive Styles */
-    @media (max-width: 992px) {
-      .navbar-nav .nav-link {
-        font-size: 1rem;
-      }
+        .product-card a:hover {
+            background-color: #2980B9;
+            transform: scale(1.05);
+        }
 
-      .hero-section {
-        padding: 100px 20px;
-      }
+        /* Offer Cards */
+        .offer-cards {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 3rem;
+            animation: fadeInUp 1.5s ease-out;
+        }
 
-      .product-card {
-        padding: 20px;
-      }
+        .offer-card {
+            background-color: #1F6F96;
+            color: white;
+            padding: 2rem;
+            width: 300px;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
 
-      .product-card h5 {
-        font-size: 1.5rem;
-      }
+        .offer-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+        }
 
-      .product-card p {
-        font-size: 1rem;
-      }
-    }
+        .offer-card h4 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
 
-    @media (max-width: 768px) {
-      .hero-section h1 {
-        font-size: 2.5rem;
-      }
+        .offer-card p {
+            font-size: 1rem;
+            margin-bottom: 1.5rem;
+        }
 
-      .hero-section p {
-        font-size: 1.2rem;
-      }
+        .offer-card a {
+            display: inline-block;
+            padding: 0.75rem 2rem;
+            font-size: 1.1rem;
+            background-color: #3498DB;
+            color: white;
+            border-radius: 5px;
+            text-transform: uppercase;
+            text-decoration: none;
+            transition: background-color 0.3s, transform 0.3s;
+        }
 
-      .product-section h2 {
-        font-size: 2rem;
-      }
+        .offer-card a:hover {
+            background-color: #2980B9;
+            transform: scale(1.05);
+        }
 
-      .product-card {
-        padding: 15px;
-      }
+        /* Footer Styles */
+        footer {
+            background-color: #34495E;
+            color: #BDC3C7;
+            padding: 2rem;
+            text-align: center;
+            margin-top: 3rem;
+        }
 
-      .navbar-brand,
-      .navbar-toggler {
-        font-size: 1.5rem;
-      }
+        footer a {
+            color: #3498DB;
+            margin: 0 1rem;
+            transition: color 0.3s;
+        }
 
-      .navbar-nav .nav-link {
-        font-size: 1rem;
-      }
-    }
+        footer a:hover {
+            color: #2980B9;
+        }
 
-    @media (max-width: 576px) {
-      .hero-section h1 {
-        font-size: 2rem;
-      }
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
 
-      .hero-section p {
-        font-size: 1.1rem;
-      }
+            .hero p {
+                font-size: 1rem;
+            }
 
-      .product-card h5 {
-        font-size: 1.3rem;
-      }
+            .product-card {
+                padding: 1.5rem;
+            }
 
-      .product-card p {
-        font-size: 1rem;
-      }
+            .offer-cards {
+                flex-direction: column;
+                align-items: center;
+            }
 
-      .footer {
-        font-size: 0.9rem;
-      }
-    }
-  </style>
+            .offer-card {
+                margin-bottom: 2rem;
+            }
+
+            .navbar-nav {
+                text-align: center;
+                width: 100%;
+            }
+
+            .navbar-nav a {
+                margin-left: 0;
+                margin-right: 0;
+                padding: 1rem;
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 0.9rem;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark">
-    <div class="container">
-      <a class="navbar-brand" href="#">
-        <i class="bi bi-globe"></i> Webify Pakistan
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="index.html">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="about.html">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="products.html">Products</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="support.html">Contact</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Webify Pakistan</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="products.html">Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
-  <!-- Hero Section -->
-  <section class="hero-section">
-    <h1>Elevate Your Online Presence</h1>
-    <p>Reliable, fast, and affordable hosting services for your website, game server, and business needs.</p>
-    <a href="#about" class="btn">Learn More</a>
-  </section>
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Our Amazing Products</h1>
+        <p>Discover our best products tailored for you, including domains, hosting, and email services. Start your journey with us!</p>
+        <div class="button-group">
+            <a href="products.html">Get Started</a>
+            <a href="learnmore.html">Learn More</a>
+        </div>
+    </section>
 
-  <!-- Domain Products Section -->
-  <section class="product-section" id="products">
-    <h2>Our Domain Products</h2>
-    <div class="container">
-      <div class="row">
-        <!-- Domain Product 1 -->
-        <div class="col-md-4 mb-4">
-          <div class="product-card">
-            <img src="https://images.pexels.com/photos/592753/pexels-photo-592753.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt=".COM Domain">
-            <h5>.COM Domain</h5>
-            <p>The most popular domain extension for businesses and individuals looking to establish an online presence.</p>
-            <div class="price">PKR 3499 / Year</div>
-            <a href="https://www.instagram.com/saadanis1029/" target="_blank" class="btn-buy">Buy Now</a>
-          </div>
-        </div>
-        <!-- Domain Product 2 -->
-        <div class="col-md-4 mb-4">
-          <div class="product-card">
-            <img src="https://images.pexels.com/photos/592753/pexels-photo-592753.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt=".NET Domain">
-            <h5>.NET Domain</h5>
-            <p>The .net domain extension is ideal for networking services and tech-related businesses.</p>
-            <div class="price">PKR 4499 / Year</div>
-            <a href="https://www.instagram.com/saadanis1029/" target="_blank" class="btn-buy">Buy Now</a>
-          </div>
-        </div>
-        <!-- Domain Product 3 -->
-        <div class="col-md-4 mb-4">
-          <div class="product-card">
-            <img src="https://images.pexels.com/photos/592753/pexels-photo-592753.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt=".NET Domain">
-            <h5>.ORG Domain</h5>
-            <p>A great choice for non-profit organizations, causes, and community-driven projects.</p>
-            <div class="price">PKR 2899 / Year</div>
-            <a href="https://www.instagram.com/saadanis1029/" target="_blank" class="btn-buy">Buy Now</a>
-          </div>
-        </div>
-        <!-- Domain Product 4 -->
-        <div class="col-md-4 mb-4">
-          <div class="product-card">
-            <img src="https://images.pexels.com/photos/592753/pexels-photo-592753.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt=".NET Domain">
-            <h5>.XYZ Domain</h5>
-            <p>Perfect for startups and entrepreneurs looking for a professional domain name.</p>
-            <div class="price">PKR 799 / Year</div>
-            <a href="https://www.instagram.com/saadanis1029/" target="_blank" class="btn-buy">Buy Now</a>
-          </div>
-        </div>
-        <!-- Domain Product 5 -->
-        <div class="col-md-4 mb-4">
-          <div class="product-card">
-            <img src="https://images.pexels.com/photos/592753/pexels-photo-592753.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt=".IO Domain">
-            <h5>.Online</h5>
-            <p>Expand your digital footprint with a .online domain. Ideal for businesses, portfolios, and personal projects, it’s a simple, straightforward way to establish your presence on the web. Perfect for anyone looking to stand out in the digital world. </p>
-            <div class="price">PKR 999 / Year</div>
-            <a href="https://www.instagram.com/saadanis1029/" target="_blank" class="btn-buy">Buy Now</a>
-          </div>
-        </div>
-        <!-- Domain Product 6 -->
-        <div class="col-md-4 mb-4">
-          <div class="product-card">
-            <img src="https://images.pexels.com/photos/592753/pexels-photo-592753.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt=".TV Domain">
-            <h5>.Site Domain</h5>
-            <p>Get noticed with a .site domain, a versatile and professional choice for any online project. Whether for a business, portfolio, or personal blog, .site offers a clean, memorable web address to help your site make an impact.</p>
-            <div class="price">PKR 999 / Year</div>
-            <a href="https://www.instagram.com/saadanis1029/" target="_blank" class="btn-buy">Buy Now</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+    <!-- Products Section -->
+    <section class="products">
+        <h2>Our Products</h2>
 
-  <!-- RDP Products Section -->
-  <section class="product-section">
-    <h2>Our RDP Products</h2>
-    <div class="container">
-      <div class="row">
-        <!-- RDP Product 1 -->
-        <div class="col-md-4 mb-4">
-          <div class="product-card">
-            <img src="https://images.pexels.com/photos/1105379/pexels-photo-1105379.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Basic RDP">
-            <h5>Basic RDP</h5>
-            <p>Get high performance with 1 Xeon Gold vCore, 6 GB RAM, and 40 GB NVMe storage. Enjoy 5 TB traffic, 1 Gbit uplink, and top-tier DDoS protection. Located in Frankfurt, Germany, with Intel Xeon Gold 6150 for smooth, secure remote access.  </p>
-            <div class="price">PKR 1499 / Month</div>
-            <a href="https://www.instagram.com/saadanis1029/" target="_blank" class="btn-buy">Buy Now</a>
-          </div>
+        <!-- Offer Cards -->
+        <div class="offer-cards">
+            <div class="offer-card">
+                <h4>Special Offer 1</h4>
+                <p>Get 50% off on all domain registrations for the first year. Don't miss out!</p>
+                <a href="https://www.instagram.com/saadanis1029/">Claim Offer</a>
+            </div>
+            <div class="offer-card">
+                <h4>Special Offer 2</h4>
+                <p>Buy hosting for one year and get free SSL certificate. Limited time offer!</p>
+                <a href="https://www.instagram.com/saadanis1029/">Claim Offer</a>
+            </div>
         </div>
-        <!-- RDP Product 2 -->
-        <div class="col-md-4 mb-4">
-          <div class="product-card">
-            <img src="https://images.pexels.com/photos/1105379/pexels-photo-1105379.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Premium RDP">
-            <h5>Premium RDP</h5>
-            <p>Boost your performance with 2 Xeon Gold vCores, 8 GB RAM, and 50 GB NVMe storage. Benefit from 10 TB monthly traffic, 1 Gbit uplink, and top-tier DDoS protection. Powered by Intel Xeon Gold 6150 (2.70 GHz, up to 3.70 GHz turbo), located in Frankfurt, Germany, for optimal speed and security. </p>
-            <div class="price">PKR 1999 / Month</div>
-            <a href="https://www.instagram.com/saadanis1029/" target="_blank" class="btn-buy">Buy Now</a>
-          </div>
-        </div>
-        <!-- RDP Product 3 -->
-        <div class="col-md-4 mb-4">
-          <div class="product-card">
-            <img src="https://images.pexels.com/photos/1105379/pexels-photo-1105379.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Premium RDP">
-            <h5>Business RDP</h5>
-            <p>Unlock powerful performance with 4 Xeon Gold vCores, 12 GB RAM, and 100 GB NVMe storage. Enjoy 15 TB monthly traffic, 1 Gbit uplink, and premium DDoS protection. Powered by Intel Xeon Gold 6150 (2.70 GHz, up to 3.70 GHz turbo) in Frankfurt, Germany, for optimal speed, security, and reliability.</p>
-            <div class="price">PKR 2499 / Month</div>
-            <a href="https://www.instagram.com/saadanis1029/" target="_blank" class="btn-buy">Buy Now</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- Hosting Products Section -->
-  <section class="product-section">
-    <h2>Our Hosting Products</h2>
-    <div class="container">
-      <div class="row">
-        <!-- Hosting Product 1 -->
-        <div class="col-md-4 mb-4">
-          <div class="product-card">
-            <img src="https://images.pexels.com/photos/17489152/pexels-photo-17489152/free-photo-of-boxes-of-computers.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Basic Hosting">
-            <h5>Minecraft Hosting</h5>
-            <p>Power your Minecraft server with the AMD Ryzen™ 5 5600G (3.90 GHz base, up to 4.40 GHz turbo) and 1 GB DDR4 RAM. This hosting plan includes free ticket support and 4 backups, ensuring smooth gameplay and reliable performance. Ideal for small to medium Minecraft servers, with excellent uptime and responsiveness.  </p>
-            <div class="price">PKR 499 / Month</div>
-            <a href="https://www.instagram.com/saadanis1029/" target="_blank" class="btn-buy">Buy Now</a>
-          </div>
+        <!-- Domains -->
+        <div class="product-category">
+            <h3>Domains</h3>
+            <div class="row justify-content-center">
+                <div class="col-md-4">
+                    <div class="product-card">
+                        <img src="https://images.pexels.com/photos/41953/earth-blue-planet-globe-planet-41953.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Domain">
+                        <h3>.COM Domain</h3>
+                        <p>Get your business online with a unique domain name.</p>
+                        <div class="price">Pkr 2499/year</div>
+                        <a href="https://www.instagram.com/saadanis1029/" target="_blank">Buy Now</a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="product-card">
+                        <img src="https://images.pexels.com/photos/41953/earth-blue-planet-globe-planet-41953.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Domain">
+                        <h3>.XYZ Domain</h3>
+                        <p>Get your business online with a unique domain name.</p>
+                        <div class="price">Pkr 699/year</div>
+                        <a href="https://www.instagram.com/saadanis1029/" target="_blank">Buy Now</a>
+                    </div>
+                </div>
+                <!-- Add more domain products here -->
+                <div class="col-md-4">
+                    <div class="product-card">
+                        <img src="https://images.pexels.com/photos/41953/earth-blue-planet-globe-planet-41953.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Domain">
+                        <h3>OTHER Domains</h3>
+                        <p>Get your business online with a unique domain name.</p>
+                        <div class="price">Contact us with domain name,</div>
+                        <a href="https://www.instagram.com/saadanis1029/" target="_blank">Buy Now</a>
+                    </div>
+                </div>
+            </div>
         </div>
-        <!-- Hosting Product 2 -->
-        <div class="col-md-4 mb-4">
-          <div class="product-card">
-            <img src="https://images.pexels.com/photos/17489152/pexels-photo-17489152/free-photo-of-boxes-of-computers.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Business Hosting">
-            <h5>Web Hosting</h5>
-            <p>Get started with 1 GB of memory and 0.6 vCPUs for efficient, lightweight performance. Perfect for small apps and APIs, this configuration ensures fast, cost-effective hosting for your projects.  </p>
-            <div class="price">PKR 200 / Month</div>
-            <a href="https://www.instagram.com/saadanis1029/" target="_blank" class="btn-buy">Buy Now</a>
-          </div>
-        </div>
-        <!-- Hosting Product 3 -->
-        <div class="col-md-4 mb-4">
-          <div class="product-card">
-            <img src="https://images.pexels.com/photos/17489152/pexels-photo-17489152/free-photo-of-boxes-of-computers.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Premium Hosting">
-            <h5>Premium Hosting</h5>
-            <p>High-speed hosting with enhanced features for growing businesses and websites.</p>
-            <div class="price">$15.99/month</div>
-            <a href="https://www.instagram.com/saadanis1029/" target="_blank" class="btn-buy">Buy Now</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- Footer -->
-  <footer class="footer">
-    <p>&copy; 2024 WebifyPakistan. All rights reserved.</p>
-    <a href="ppolicy.html">Privacy Policy</a> | <a href="terms.html">Terms of Service</a>
-  </footer>
+        <!-- Hosting -->
+        <div class="product-category">
+            <h3>Web Hosting</h3>
+            <div class="row justify-content-center">
+                <div class="col-md-4">
+                    <div class="product-card">
+                        <img src="https://images.pexels.com/photos/1148820/pexels-photo-1148820.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Web Hosting">
+                        <h3>Web Hosting</h3>
+                        <p>Fast and reliable web hosting solutions for your site.</p>
+                        <div class="price">Pkr 399/month</div>
+                        <a href="https://www.instagram.com/saadanis1029/" target="_blank">Buy Now</a>
+                    </div>
+                </div>
+                <!-- Add more hosting products here -->
+            </div>
+        </div>
 
-  <!-- Bootstrap JS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Webmail -->
+        <div class="product-category">
+            <h3>Webmail</h3>
+            <div class="row justify-content-center">
+                <div class="col-md-4">
+                    <div class="product-card">
+                        <img src="https://images.pexels.com/photos/5706001/pexels-photo-5706001.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Webmail">
+                        <h3>Webmail Starter</h3>
+                        <p>Professional email service for your business. ( Contact for specs )</p>
+                        <div class="price">Pkr 499/month</div>
+                        <a href="https://www.instagram.com/saadanis1029/" target="_blank">Buy Now</a>
+                    </div>
+                </div>
+                <!-- Add more webmail products here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Webify Pakistan. All rights reserved.</p>
+        <p><a href="privacypolicy.html">Privacy Policy</a> | <a href="terms.html">Terms of Service</a> | <a href="contact.html">Contact Us</a></p>
+    </footer>
+
+    <!-- Bootstrap JS and Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
 </body>
 
 </html>
