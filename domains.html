@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Domain Registration - Webify Pakistan</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* General Styles */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', Arial, sans-serif;
+            background: #2C3E50;
+            color: #ECF0F1;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        /* Navbar Styles */
+        .navbar {
+            background-color: #1A3D6C;
+            padding: 1rem;
+        }
+
+        .navbar-brand {
+            font-size: 2rem;
+            color: white;
+            font-weight: bold;
+            white-space: nowrap;
+        }
+
+        .navbar-nav {
+            margin-left: auto;
+        }
+
+        .navbar-nav .nav-item {
+            margin-left: 2rem;
+        }
+
+        .navbar-nav a {
+            font-size: 1.1rem;
+            color: white;
+            transition: color 0.3s;
+        }
+
+        .navbar-nav a:hover {
+            color: #3498DB;
+        }
+
+        .navbar-collapse {
+            justify-content: flex-end;
+        }
+
+        .navbar-toggler {
+            border: none;
+        }
+
+        .navbar-toggler-icon {
+            background-color: white;
+        }
+
+        /* Slow loading animation */
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .slow-loading-text {
+            animation: fadeIn 2s ease-out;
+        }
+
+        /* Domain Registration Section */
+        .domains {
+            padding: 5rem 2rem;
+            background: #34495E;
+            color: #ECF0F1;
+            text-align: center;
+        }
+
+        .domains h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            color: #3498DB;
+        }
+
+        .domains p {
+            font-size: 1.2rem;
+            margin-bottom: 3rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .feature-cards {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 3rem;
+            flex-wrap: wrap; /* Ensures the cards wrap in small screen sizes */
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .feature-card {
+            background: #1F6F96;
+            padding: 2rem;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s, box-shadow 0.3s, background 0.3s ease;
+            width: 100%;
+            max-width: 350px; /* Set a max width to prevent too large on larger screens */
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+            background: #3498DB;
+        }
+
+        .feature-card h4 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .feature-card p {
+            color: #BDC3C7;
+        }
+
+        .cta-btn {
+            display: inline-block;
+            padding: 0.75rem 2rem;
+            font-size: 1.1rem;
+            font-weight: bold;
+            background: #3498DB;
+            color: white;
+            border-radius: 5px;
+            margin-top: 1rem;
+            transition: background 0.3s, transform 0.3s;
+        }
+
+        .cta-btn:hover {
+            background: #2980B9;
+            transform: scale(1.05);
+        }
+
+        .cta-note {
+            margin-top: 3rem;
+            font-size: 1rem;
+            color: #BDC3C7;
+        }
+
+        .cta-note .warning {
+            color: #E74C3C;
+            font-weight: bold;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 992px) {
+            .feature-cards {
+                flex-direction: column;
+                gap: 1.5rem;
+                align-items: center; /* Center the cards */
+            }
+
+            .cta-btn {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg">
+        <a class="navbar-brand" href="#">Webify Pakistan</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="products.html">Products</a></li>
+                <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+               <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Domain Registration Section -->
+    <div class="domains">
+        <h2 class="slow-loading-text">Domain Registration Services</h2>
+        <p class="slow-loading-text">Looking for a domain name? We offer a variety of domain extensions, including .com, .xyz, and .shop. Get the perfect domain name to represent your brand or project and make your online presence professional and credible.</p>
+
+        <!-- Feature Cards Section -->
+        <div class="feature-cards">
+            <div class="feature-card">
+                <h4>Wide Variety of Extensions</h4>
+                <p>Choose from a variety of domain extensions like .com, .xyz, .shop, and many more to find the perfect match for your needs.</p>
+            </div>
+            <div class="feature-card">
+                <h4>Instant Registration</h4>
+                <p>Get your desired domain name registered instantly and start using it right away without any hassle.</p>
+            </div>
+            <div class="feature-card">
+                <h4>Affordable Prices</h4>
+                <p>We offer competitive pricing for domain registration with various packages to suit different budgets and requirements.</p>
+            </div>
+        </div>
+
+        <a href="https://www.instagram.com/saadanis1029/" target="_blank" class="cta-btn">Contact Us on Instagram to Purchase</a>
+        
+        <!-- New Button for Products Page -->
+        <a href="products.html" class="cta-btn">For Plans and Pricing, Visit Products Page</a>
+
+        <!-- Disclaimer and Note Section -->
+        <div class="cta-note">
+            <p><span class="warning">Disclaimer:</span> As an underage operator, I may not fully understand all the laws around this service. Please use accordingly. Also, note that the domain registration service is often resold.</p>
+            <p>If you have any concerns or questions, feel free to reach out through our Instagram profile.</p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer style="background-color: #34495E; color: #BDC3C7; padding: 2rem; text-align: center;">
+        <p>&copy; 2024 Webify Pakistan. All rights reserved. | <a href="terms.html">Terms & Conditions</a> | <a href="privacypolicy.html">Privacy Policy</a> | <a href="contact.html">Contact Us</a></p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
