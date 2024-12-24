@@ -2,460 +2,499 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Webify Pakistan - Elevate Your Online Presence</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css">
-  <style>
-    /* General Styles */
-    body {
-      font-family: 'Poppins', sans-serif;
-      background-color: #f4f6f9;
-      color: #343a40;
-      margin: 0;
-      padding: 0;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webify Pakistan</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* General Styles */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', Arial, sans-serif;
+            background: #2C3E50;
+            color: #ECF0F1;
+        }
 
-    /* Navbar Styles */
-    .navbar {
-      background: #0a0a23;
-      padding: 1rem 1.5rem;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    }
+        a {
+            text-decoration: none;
+        }
 
-    .navbar-brand {
-      font-size: 2.5rem;
-      font-weight: 700;
-      color: #ffffff;
-      display: flex;
-      align-items: center;
-    }
+        /* Navbar Styles */
+        .navbar {
+            background-color: #1A3D6C;
+            padding: 1rem;
+        }
 
-    .navbar-brand i {
-      margin-right: 10px;
-      font-size: 2.8rem;
-      color: #ffc107;
-    }
+        .navbar-brand {
+            font-size: 2rem;
+            color: white;
+            font-weight: bold;
+            white-space: nowrap;
+        }
 
-    .navbar-nav .nav-link {
-      color: #ffffff;
-      font-size: 1.1rem;
-      margin: 0 10px;
-      position: relative;
-    }
+        .navbar-nav {
+            margin-left: auto;
+        }
 
-    .navbar-nav .nav-link:hover::after {
-      content: '';
-      width: 100%;
-      height: 2px;
-      background: #ffc107;
-      position: absolute;
-      bottom: -5px;
-      left: 0;
-    }
+        .navbar-nav .nav-item {
+            margin-left: 2rem;
+        }
 
-    /* Hero Section */
-    .hero-section {
-      background: linear-gradient(140deg, #0a0a23, #1d2671, #0083b0);
-      color: #ffffff;
-      padding: 120px 20px;
-      text-align: center;
-      border-bottom: 5px solid #ffc107;
-    }
+        .navbar-nav a {
+            font-size: 1.1rem;
+            color: white;
+            transition: color 0.3s;
+        }
 
-    .hero-section h1 {
-      font-size: 3.5rem;
-      font-weight: 700;
-    }
+        .navbar-nav a:hover {
+            color: #3498DB;
+        }
 
-    .hero-section p {
-      font-size: 1.4rem;
-      margin-top: 20px;
-      font-weight: 300;
-    }
+        .navbar-collapse {
+            justify-content: flex-end;
+        }
 
-    .hero-section .btn {
-      background-color: #ffc107;
-      color: #0a0a23;
-      padding: 15px 40px;
-      font-size: 1.2rem;
-      border-radius: 30px;
-      transition: all 0.3s ease;
-    }
+        .navbar-toggler {
+            border: none;
+        }
 
-    .hero-section .btn:hover {
-      background-color: #e0a800;
-      transform: scale(1.1);
-    }
+        .navbar-toggler-icon {
+            background-color: white;
+        }
 
-    /* Our Expertise Section */
-    .services-section {
-      padding: 80px 20px;
-      background: #f4f6f9;
-    }
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #0A3D6B, #1F6F96);
+            color: white;
+            text-align: center;
+            padding: 6rem 2rem;
+            position: relative;
+        }
 
-    .services-section h2 {
-      text-align: center;
-      font-size: 3rem;
-      color: #0a0a23;
-      font-weight: 700;
-      margin-bottom: 50px;
-    }
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+            letter-spacing: 1px;
+            opacity: 0;
+            animation: fadeInText 3s forwards;
+        }
 
-    .service-box {
-      background: #ffffff;
-      padding: 30px;
-      border-radius: 12px;
-      text-align: center;
-      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
-      transition: transform 0.3s, box-shadow 0.3s ease;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      height: 100%;
-    }
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            opacity: 0;
+            animation: fadeInText 3.5s forwards;
+        }
 
-    .service-box:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
-    }
+        @keyframes fadeInText {
+            0% {
+                opacity: 0;
+            }
 
-    .service-icon {
-      font-size: 4rem;
-      color: #0078d4;
-      margin-bottom: 20px;
-    }
+            100% {
+                opacity: 1;
+            }
+        }
 
-    .service-box h5 {
-      font-size: 1.7rem;
-      font-weight: 600;
-      margin-bottom: 15px;
-    }
+        .hero .button-group {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+        }
 
-    .service-box p {
-      font-size: 1.1rem;
-      color: #666;
-    }
+        .hero .button-group a {
+            padding: 0.75rem 2rem;
+            border-radius: 5px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            color: white;
+            background: #3498DB;
+            transition: background 0.3s, transform 0.3s;
+        }
 
-    .service-box .learn-more {
-      color: #0078d4;
-      font-weight: 600;
-      margin-top: 15px;
-    }
+        .hero .button-group a:hover {
+            background: #2980B9;
+            transform: scale(1.05);
+        }
 
-    /* Testimonials Section */
-    .testimonials {
-      background-color: #ffffff;
-      padding: 80px 20px;
-    }
+        /* Services Section */
+        .services {
+            padding: 5rem 2rem;
+            background: #34495E;
+        }
 
-    .testimonials h2 {
-      text-align: center;
-      font-size: 3rem;
-      font-weight: 700;
-      color: #0a0a23;
-      margin-bottom: 50px;
-    }
+        .services h2 {
+            font-size: 2.5rem;
+            color: #3498DB;
+            margin-bottom: 3rem;
+            text-align: center;
+        }
 
-    .testimonial-box {
-      background: #f8f9fa;
-      border-radius: 10px;
-      padding: 20px;
-      text-align: center;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-      transition: transform 0.3s ease;
-      min-height: 200px;
-    }
+        .service-card {
+            background: #34495E;
+            padding: 2rem;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s, box-shadow 0.3s, background 0.3s ease;
+        }
 
-    .testimonial-box:hover {
-      transform: translateY(-10px);
-    }
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+            background: #1F6F96;
+        }
 
-    .testimonial-box p {
-      font-size: 1.1rem;
-      color: #555;
-      margin-bottom: 15px;
-    }
+        .service-card img {
+            width: 80px;
+            height: auto;
+            margin-bottom: 1rem;
+        }
 
-    .testimonial-box .client {
-      font-weight: bold;
-      color: #0078d4;
-    }
+        .service-card h3 {
+            font-size: 1.6rem;
+            margin-bottom: 0.5rem;
+            color: #3498DB;
+        }
 
-    /* Support Section */
-    .support-section {
-      padding: 80px 20px;
-      background: #0a0a23;
-      color: #f8f9fa;
-      text-align: center;
-    }
+        .service-card p {
+            color: #BDC3C7;
+            line-height: 1.5;
+        }
 
-    .support-section h2 {
-      font-size: 3rem;
-      font-weight: 700;
-      margin-bottom: 30px;
-    }
+        .service-card a {
+            display: inline-block;
+            padding: 0.75rem 2rem;
+            font-size: 1.1rem;
+            font-weight: bold;
+            background-color: #3498DB;
+            color: white;
+            border-radius: 5px;
+            text-transform: uppercase;
+            margin-top: 1rem;
+            transition: background-color 0.3s ease, transform 0.3s;
+        }
 
-    .support-section p {
-      font-size: 1.2rem;
-      margin-bottom: 20px;
-    }
+        .service-card a:hover {
+            background-color: #2980B9;
+            transform: scale(1.05);
+        }
 
-    .support-btn {
-      background-color: #ffc107;
-      padding: 15px 30px;
-      color: #0a0a23;
-      font-size: 1.2rem;
-      text-decoration: none;
-      border-radius: 30px;
-      transition: background-color 0.3s;
-    }
+        /* Reviews Section */
+        .reviews {
+            padding: 5rem 2rem;
+            background: #34495E;
+            color: #ECF0F1;
+        }
 
-    .support-btn:hover {
-      background-color: #e0a800;
-    }
+        .reviews h2 {
+            font-size: 2.5rem;
+            color: #3498DB;
+            margin-bottom: 3rem;
+            text-align: center;
+        }
 
-    /* Footer */
-    .footer {
-      background-color: #0a0a23;
-      color: #f8f9fa;
-      padding: 40px 0;
-      text-align: center;
-    }
+        .review-card {
+            background: #34495E;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            margin-bottom: 2rem;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s, filter 0.3s ease;
+        }
 
-    .footer a {
-      color: #ffc107;
-      text-decoration: none;
-      margin: 0 10px;
-    }
+        .review-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+            filter: brightness(1.1);
+        }
 
-    .footer a:hover {
-      color: #e0a800;
-    }
+        .review-card p {
+            color: #BDC3C7;
+            line-height: 1.5;
+        }
 
-    /* Responsive Styles */
-    @media (max-width: 1200px) {
-      .hero-section h1 {
-        font-size: 3rem;
-      }
-      .hero-section p {
-        font-size: 1.3rem;
-      }
-    }
+        .review-card h3 {
+            font-size: 1.6rem;
+            margin-bottom: 1rem;
+            color: #3498DB;
+        }
 
-    @media (max-width: 992px) {
-      .navbar-nav .nav-link {
-        font-size: 1rem;
-      }
+        .review-card .stars {
+            color: #FFD700;
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+        }
 
-      .hero-section {
-        padding: 100px 20px;
-      }
+        .review-card .reviewer {
+            font-size: 1rem;
+            font-weight: bold;
+            color: #BDC3C7;
+        }
 
-      .service-box {
-        padding: 20px;
-      }
+        /* Newsletter Section */
+        .newsletter {
+            background: #1A3D6C;
+            color: white;
+            padding: 5rem 2rem;
+            text-align: center;
+            margin-top: 3rem;
+        }
 
-      .service-box h5 {
-        font-size: 1.5rem;
-      }
+        .newsletter h2 {
+            font-size: 2.5rem;
+            color: #3498DB;
+            margin-bottom: 2rem;
+        }
 
-      .service-box p {
-        font-size: 1rem;
-      }
+        .newsletter p {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            color: #BDC3C7;
+        }
 
-      .testimonial-box p {
-        font-size: 1rem;
-      }
+        .newsletter form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
 
-      .support-section {
-        padding: 60px 20px;
-      }
+        .newsletter input[type="email"] {
+            padding: 0.75rem;
+            font-size: 1rem;
+            border-radius: 5px;
+            border: none;
+            width: 60%;
+            margin-right: 1rem;
+        }
 
-      .support-btn {
-        font-size: 1.1rem;
-      }
-    }
+        .newsletter button {
+            padding: 0.75rem 2rem;
+            background: #3498DB;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: background 0.3s, transform 0.3s;
+        }
 
-    @media (max-width: 768px) {
-      .hero-section h1 {
-        font-size: 2.5rem;
-      }
+        .newsletter button:hover {
+            background: #2980B9;
+            transform: scale(1.05);
+        }
 
-      .hero-section p {
-        font-size: 1.2rem;
-      }
+        /* Footer Styles */
+        footer {
+            background-color: #34495E;
+            color: #BDC3C7;
+            padding: 2rem;
+            text-align: center;
+            margin-top: 3rem;
+        }
 
-      .services-section h2,
-      .testimonials h2,
-      .support-section h2 {
-        font-size: 2rem;
-      }
+        footer a {
+            color: #3498DB;
+            margin: 0 1rem;
+        }
 
-      .service-box {
-        padding: 15px;
-      }
+        footer a:hover {
+            text-decoration: underline;
+        }
 
-      .testimonial-box {
-        min-height: auto;
-      }
+        /* Responsive Styles */
+        @media (max-width: 1200px) {
+            .container {
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+        }
 
-      .navbar-brand,
-      .navbar-toggler {
-        font-size: 1.5rem;
-      }
+        @media (max-width: 992px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
 
-      .navbar-nav .nav-link {
-        font-size: 1rem;
-      }
-    }
+            .hero p {
+                font-size: 1rem;
+                margin-bottom: 1.5rem;
+            }
 
-    @media (max-width: 576px) {
-      .hero-section h1 {
-        font-size: 2rem;
-      }
+            .hero .button-group {
+                flex-direction: column;
+                gap: 1rem;
+            }
 
-      .hero-section p {
-        font-size: 1.1rem;
-      }
+            .service-card {
+                padding: 1.5rem;
+                margin-bottom: 2rem;
+            }
 
-      .service-box h5 {
-        font-size: 1.3rem;
-      }
+            .review-card {
+                padding: 1.5rem;
+                margin-bottom: 2rem;
+            }
 
-      .service-box p {
-        font-size: 1rem;
-      }
+            .newsletter input[type="email"] {
+                width: 80%;
+            }
 
-      .testimonial-box p {
-        font-size: 1rem;
-      }
+            .newsletter button {
+                padding: 0.75rem 1.5rem;
+            }
 
-      .support-btn {
-        font-size: 1rem;
-        padding: 12px 25px;
-      }
+            .navbar-nav {
+                text-align: center;
+                margin-top: 1rem;
+            }
 
-      .footer {
-        font-size: 0.9rem;
-      }
-    }
-  </style>
+            .navbar-nav .nav-item {
+                margin-left: 0;
+                margin-bottom: 1rem;
+            }
+
+            .service-card a {
+                font-size: 1rem;
+                padding: 0.5rem 1.5rem;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .navbar-nav .nav-item {
+                margin-left: 0;
+                margin-bottom: 1rem;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .navbar-toggler {
+                padding: 0.5rem;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark">
-    <div class="container">
-      <a class="navbar-brand" href="#">
-        <i class="bi bi-globe"></i> Webify Pakistan
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="index.html">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="about.html">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="products.html">Products</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="support.html">Contact</a>
-          </li>
-        </ul>
-      </div>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg">
+        <a class="navbar-brand" href="index.html">Webify Pakistan</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="products.html">Products</a></li>
+                <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="hero">
+        <h1>Welcome to Webify Pakistan</h1>
+        <p>Your one-stop solution for domains, webmails, and website hosting.</p>
+        <div class="button-group">
+            <a href="products.html">Get Started</a>
+            <a href="learnmore.html8">Learn More</a>
+        </div>
     </div>
-  </nav>
 
-  <!-- Hero Section -->
-  <section class="hero-section">
-    <h1>Elevate Your Online Presence</h1>
-    <p>Reliable, fast, and affordable hosting services for your website, game server, and business needs.</p>
-    <a href="index.html" class="btn">Learn More</a>
-  </section>
+    <!-- Products Section -->
+    <div class="services">
+        <h2>Our Products</h2>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="service-card">
+                        <img src="https://cdn.pixabay.com/photo/2023/04/29/16/10/ai-generated-7958874_1280.jpg" alt="Web Hosting">
+                        <h3>Web Hosting</h3>
+                        <p>Reliable and fast hosting services for your website needs.</p>
+                        <a href="webhosting.html">Learn More</a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="service-card">
+                        <img src="https://cdn.pixabay.com/photo/2017/03/03/09/49/earth-2113656_960_720.jpg" alt="Domain Registration">
+                        <h3>Domain Registration</h3>
+                        <p>Register your own unique domain name with ease.</p>
+                        <a href="domains.html">Learn More</a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12">
 
-  <!-- Services Section -->
-  <section class="services-section" id="about">
-    <h2>Our Expertise</h2>
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-4 col-md-6 mb-4">
-          <div class="service-box">
-            <div class="service-icon"><i class="bi bi-server"></i></div>
-            <h5>Web Hosting</h5>
-            <p>Reliable and fast web hosting solutions to keep your website running smoothly.</p>
-            <a href="products.html" class="learn-more">Learn More</a>
-          </div>
+                    <div class="service-card">
+                        <img src="https://images.pexels.com/photos/4721999/pexels-photo-4721999.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Webmail Services">
+                        <h3>Webmail Services</h3>
+                        <p>Get professional email accounts linked to your domain.</p>
+                        <a href="webmail.html">Learn More</a>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="col-lg-4 col-md-6 mb-4">
-          <div class="service-box">
-            <div class="service-icon"><i class="bi bi-laptop"></i></div>
-            <h5>RDP Hosting</h5>
-            <p>Remote desktop solutions for your business and personal use.</p>
-            <a href="products.html" class="learn-more">Learn More</a>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6 mb-4">
-          <div class="service-box">
-            <div class="service-icon"><i class="bi bi-controller"></i></div>
-            <h5>Game Hosting</h5>
-            <p>High-performance servers for smooth and lag-free gaming experiences.</p>
-            <a href="products.html" class="learn-more">Learn More</a>
-          </div>
-        </div>
-      </div>
     </div>
-  </section>
 
-  <!-- Testimonials Section -->
-  <section class="testimonials" id="products">
-    <h2>What Our Clients Say</h2>
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-4 col-md-6 mb-4">
-          <div class="testimonial-box">
-            <p>"Webify Pakistan's hosting services have greatly improved our website's speed. Excellent support and performance!"</p>
-            <div class="client">Ali Raza</div>
-          </div>
+    <!-- Reviews Section -->
+    <div class="reviews">
+        <h2>What Our Clients Say</h2>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6">
+                    <div class="review-card">
+                        <div class="stars">★★★★★</div>
+                        <h3>John Doe</h3>
+                        <p>Great service and amazing support. Highly recommend!</p>
+                        <p class="reviewer">Web Developer</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="review-card">
+                        <div class="stars">★★★★★</div>
+                        <h3>Jane Smith</h3>
+                        <p>Excellent hosting with a seamless experience. Very satisfied!</p>
+                        <p class="reviewer">Business Owner</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="review-card">
+                        <div class="stars">★★★★★</div>
+                        <h3>Alex Brown</h3>
+                        <p>Professional and reliable hosting solutions. Will definitely continue using them!</p>
+                        <p class="reviewer">Developer</p>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="col-lg-4 col-md-6 mb-4">
-          <div class="testimonial-box">
-            <p>"The game hosting we got is top-notch. Our gaming community loves the lag-free experience!"</p>
-            <div class="client">Sara Khan</div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6 mb-4">
-          <div class="testimonial-box">
-            <p>"Great RDP solutions for our business. We've been able to work remotely with ease."</p>
-            <div class="client">Zain Malik</div>
-          </div>
-        </div>
-      </div>
     </div>
-  </section>
 
-  <!-- Support Section -->
-  <section class="support-section" id="contact">
-    <h2>Need Support?</h2>
-    <p>We’re here to assist you with any hosting or service-related queries. Contact our support team for assistance.</p>
-    <a href="saadbinshahid2008@gmail.com" class="support-btn">Get in Touch</a>
-  </section>
+    <!-- Newsletter Section -->
+    <div class="newsletter">
+        <h2>Subscribe to Our Newsletter</h2>
+        <p>Stay updated with our latest services, discounts, and offers.</p>
+        <form action="https://formspree.io/f/mleaqjql" method="POST">
+            <input type="email" name="email" placeholder="Enter your email" required>
+            <button type="submit">Subscribe</button>
+        </form>
+    </div>
 
-  <!-- Footer -->
-  <footer class="footer">
-    <p>&copy; 2024 Webify Pakistan. All Rights Reserved.</p>
-    <a href="ppolicy.html">Privacy Policy</a> | <a href="terms.html">Terms & Conditions</a>
-  </footer>
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Webify Pakistan. All rights reserved. | <a href="terms.html">Terms & Conditions</a> | <a href="privacypolicy.html">Privacy
+            Policy</a> | <a href="contact.html">Contact Us</a></p>
+    </footer>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
