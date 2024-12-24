@@ -1,148 +1,229 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Terms of Service - Webify Pakistan</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
+        /* General Styles */
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f9;
-            color: #333;
             margin: 0;
             padding: 0;
+            font-family: 'Poppins', Arial, sans-serif;
+            background: #2C3E50;
+            color: #ECF0F1;
         }
 
-        .container {
-            width: 90%;
-            max-width: 1200px;
-            margin: 20px auto;
-            padding: 20px;
-            background-color: #fff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
-        }
-
-        h1, h2 {
-            color: #333;
-            font-size: 2em;
-            text-align: center;
-            margin-bottom: 20px;
-        }
-
-        h2 {
-            margin-top: 40px;
-        }
-
-        p {
-            line-height: 1.6;
-            margin-bottom: 15px;
-            font-size: 1.1em;
-        }
-
-        ul {
-            margin-left: 20px;
-            margin-bottom: 20px;
-        }
-
-        li {
-            margin-bottom: 10px;
-        }
-
-        .footer {
-            text-align: center;
-            font-size: 0.9em;
-            color: #777;
-            margin-top: 40px;
-        }
-
-        .footer a {
-            color: #007bff;
+        a {
             text-decoration: none;
         }
 
-        .footer a:hover {
-            text-decoration: underline;
+        /* Navbar Styles */
+        .navbar {
+            background-color: #1A3D6C;
+            padding: 1rem;
         }
 
-        @media (max-width: 768px) {
-            .container {
-                width: 95%;
-                padding: 15px;
+        .navbar-brand {
+            font-size: 2rem;
+            color: white;
+            font-weight: bold;
+            white-space: nowrap;
+        }
+
+        .navbar-nav {
+            margin-left: auto;
+        }
+
+        .navbar-nav .nav-item {
+            margin-left: 2rem;
+        }
+
+        .navbar-nav a {
+            font-size: 1.1rem;
+            color: white;
+            transition: color 0.3s;
+        }
+
+        .navbar-nav a:hover {
+            color: #3498DB;
+        }
+
+        .navbar-collapse {
+            justify-content: flex-end;
+        }
+
+        .navbar-toggler {
+            border: none;
+        }
+
+        .navbar-toggler-icon {
+            background-color: white;
+        }
+
+        /* Slow loading animation */
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
             }
-            h1 {
-                font-size: 1.5em;
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
             }
-            h2 {
-                font-size: 1.5em;
-            }
-            p, ul {
-                font-size: 1em;
+        }
+
+        .slow-loading-text {
+            animation: fadeIn 2s ease-out;
+        }
+
+        /* Terms of Service Section */
+        .terms-of-service {
+            padding: 5rem 2rem;
+            background: #34495E;
+            color: #ECF0F1;
+            text-align: center;
+        }
+
+        .terms-of-service h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            color: #3498DB;
+        }
+
+        .terms-of-service p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .terms-of-service ul {
+            text-align: left;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            font-size: 1.1rem;
+        }
+
+        .terms-of-service li {
+            margin-bottom: 1rem;
+        }
+
+        .cta-note {
+            margin-top: 3rem;
+            font-size: 1rem;
+            color: #BDC3C7;
+        }
+
+        .cta-note .warning {
+            color: #E74C3C;
+            font-weight: bold;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 992px) {
+            .terms-of-service p {
+                font-size: 1rem;
             }
         }
     </style>
 </head>
+
 <body>
 
-<div class="container">
-    <h1>Terms of Service</h1>
-    <p><strong>Effective Date:</strong> November 28, 2024</p>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg">
+        <a class="navbar-brand" href="#">Webify Pakistan</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="products.html">Products</a></li>
+                <li class="nav-item"><a class="nav-link" href="domains.html">Domains</a></li>
+                <li class="nav-item"><a class="nav-link" href="webmail.html">Webmail</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                <li class="nav-item"><a class="nav-link" href="terms-of-service.html">Terms of Service</a></li>
+            </ul>
+        </div>
+    </nav>
 
-    <p>Welcome to Webify Pakistan! By using our services, you agree to comply with and be bound by the following terms and conditions. Please read these terms carefully before using our website and services, which include domain registration, RDPs (Remote Desktop Protocol), game hosting, and web hosting.</p>
+    <!-- Terms of Service Section -->
+    <div class="terms-of-service">
+        <h2 class="slow-loading-text">Terms of Service</h2>
+        <p class="slow-loading-text">Welcome to Webify Pakistan. By using our services, you agree to the following terms and
+            conditions. Please read them carefully before using our platform.</p>
 
-    <h2>1. Acceptance of Terms</h2>
-    <p>By accessing or using the services offered by Webify Pakistan, you agree to be bound by these Terms of Service and all applicable laws and regulations. If you do not agree with any of these terms, you are prohibited from using or accessing our services.</p>
+        <h3>General Terms</h3>
+        <ul>
+            <li>Our services are provided "as is" and we make no guarantees regarding their availability or functionality.</li>
+            <li>You are responsible for maintaining the security of your account and any data stored on our platform.</li>
+            <li>We reserve the right to suspend or terminate your account at any time if we believe there has been a violation of these terms.</li>
+            <li>We may change or update these terms at any time, and it is your responsibility to review them periodically.</li>
+        </ul>
 
-    <h2>2. Services Provided</h2>
-    <p>Webify Pakistan offers a variety of services, including:</p>
-    <ul>
-        <li>Domain registration</li>
-        <li>RDP (Remote Desktop Protocol) services</li>
-        <li>Game hosting services</li>
-        <li>Web hosting services</li>
-    </ul>
-    <p>We reserve the right to change, suspend, or discontinue any of our services at any time without prior notice.</p>
+        <h3>Account Usage</h3>
+        <ul>
+            <li>You are responsible for ensuring that all the information you provide to us is accurate and up-to-date.</li>
+            <li>Any violation of these terms, including unauthorized access to the system or misuse of services, may result in account suspension or termination.</li>
+            <li>Accounts are non-transferable. You may not allow others to use your account.</li>
+        </ul>
 
-    <h2>3. User Responsibilities</h2>
-    <p>As a user, you agree to:</p>
-    <ul>
-        <li>Provide accurate, current, and complete information when creating an account and using our services.</li>
-        <li>Be responsible for maintaining the confidentiality of your account credentials and ensuring the security of your account.</li>
-        <li>Comply with all applicable laws and regulations when using our services.</li>
-        <li>Not engage in any activity that could damage, disable, or interfere with the operation of our website or services.</li>
-    </ul>
+        <h3>Prohibited Activities</h3>
+        <ul>
+            <li>You are prohibited from using our services for any illegal activities, including but not limited to fraud, harassment, or distribution of malicious content.</li>
+            <li>You may not interfere with the proper functioning of the platform or attempt to exploit any vulnerabilities.</li>
+            <li>Any attempt to bypass security protocols or misuse our services will result in immediate account termination.</li>
+        </ul>
 
-    <h2>4. Payment and Billing</h2>
-    <p>By purchasing any of our services, you agree to pay all applicable fees for the services provided. Payments must be made in accordance with the payment terms specified during the checkout process. You are responsible for ensuring that payment information is accurate and up-to-date.</p>
+        <h3>Reselling of Services</h3>
+        <ul>
+            <li>You may resell our services to third parties, but you must comply with all applicable laws and regulations regarding reselling, including those related to data privacy and security.</li>
+            <li>You are responsible for managing any agreements or disputes with third parties regarding resold services.</li>
+            <li>We do not provide direct support to resold customers; all support must be handled by you, the reseller.</li>
+        </ul>
 
-    <h2>5. Termination and Suspension</h2>
-    <p>We reserve the right to suspend or terminate your account or access to our services if you violate these Terms of Service, engage in fraudulent activities, or engage in any actions that could harm our reputation or operations.</p>
+        <h3>Underage Disclaimer</h3>
+        <p class="slow-loading-text">As an underage operator, I acknowledge that I may not fully understand the legal
+            implications of using this service. I agree to use this platform responsibly and in compliance with applicable
+            laws to the best of my understanding. By using our services, you agree to do so responsibly and in a manner that
+            complies with all relevant regulations.</p>
 
-    <h2>6. Limitation of Liability</h2>
-    <p>Webify Pakistan will not be liable for any direct, indirect, incidental, special, or consequential damages arising out of the use or inability to use our services, even if we have been advised of the possibility of such damages.</p>
+        <h3>Limitation of Liability</h3>
+        <ul>
+            <li>Webify Pakistan is not responsible for any loss, damage, or data breach resulting from the use of our services.</li>
+            <li>We are not liable for the accuracy or legality of any content stored or transmitted via our services.</li>
+            <li>We are not responsible for any third-party services or content linked to our platform.</li>
+        </ul>
 
-    <h2>7. Privacy Policy</h2>
-    <p>Your use of our services is also governed by our Privacy Policy, which outlines how we collect, use, and protect your personal information. You can view our Privacy Policy <a href="/ppolicy.html">here</a>.</p>
+        <h3>Termination of Services</h3>
+        <ul>
+            <li>We reserve the right to suspend or terminate your access to the platform at our discretion, especially in cases of violation of these terms.</li>
+            <li>If your account is terminated, you will lose access to your services, and any remaining data may be permanently deleted.</li>
+            <li>We also reserve the right to discontinue providing services at any time, without prior notice, and without issuing refunds or compensation for any unused services.</li>
+        </ul>
 
-    <h2>8. Modifications to the Terms</h2>
-    <p>Webify Pakistan reserves the right to update or modify these Terms of Service at any time. Any changes will be posted on this page with an updated "Effective Date." By continuing to use our services after any such changes, you agree to the revised terms.</p>
+        <div class="cta-note">
+            <p><span class="warning">Important:</span> Webify Pakistan services are resold by third parties. Please ensure you
+                understand the nature of these services and use them according to applicable laws.</p>
+            <p><span class="warning">Notice:</span> In case we decide to terminate any services, there will be no refunds issued. Please ensure that you are fully aware of this before using our platform.</p>
+        </div>
 
-    <h2>9. Governing Law</h2>
-    <p>These Terms of Service will be governed by and construed in accordance with the laws of Pakistan. Any disputes arising out of or in connection with these terms will be subject to the exclusive jurisdiction of the courts in Pakistan.</p>
-
-    <h2>10. Contact Us</h2>
-    <p>If you have any questions or concerns about these Terms of Service, please contact us at:</p>
-    <ul>
-        <li><strong>Email:</strong> <a href="mailto:saadbinshahid2008@gmail.com">saadbinshahid2008@gmail.com</a></li>
-        <li><strong>Phone:</strong> [Insert phone number]</li>
-        <li><strong>Address:</strong> [Insert address]</li>
-    </ul>
-
-    <div class="footer">
-        <p>© 2024 Webify Pakistan. All rights reserved.</p>
     </div>
-</div>
 
+    <!-- Footer -->
+    <footer style="background-color: #34495E; color: #BDC3C7; padding: 2rem; text-align: center;">
+        <p>&copy; 2024 Webify Pakistan. All rights reserved. | <a href="terms.html">Terms & Conditions</a> | <a href="privacypolicy.html">Privacy Policy</a> | <a href="contact.html">Contact Us</a></p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
